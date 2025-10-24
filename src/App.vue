@@ -1,15 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <WebHeader />
+  <WebSection />
+  <WebFeatures />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import WebHeader from './components/WebHeader.vue';
+import WebSection from './components/WebSection.vue';
+import WebFeatures from './components/WebFeatures.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    WebHeader,
+    WebSection,
+    WebFeatures,
   }
 }
 </script>
@@ -21,6 +27,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  list-style: none;
 }
 </style>
