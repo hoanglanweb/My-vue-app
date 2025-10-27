@@ -1,21 +1,20 @@
 <template>
   <WebHeader />
-  <WebSection />
-  <WebFeatures />
+  <router-view />
+  <WebFooter />
 </template>
 
 <script>
 
 import WebHeader from './components/WebHeader.vue';
-import WebSection from './components/WebSection.vue';
-import WebFeatures from './components/WebFeatures.vue';
+import WebFooter from './components/WebFooter.vue';
 
 export default {
   name: 'App',
   components: {
     WebHeader,
-    WebSection,
-    WebFeatures,
+    WebFooter,
+
   }
 }
 </script>

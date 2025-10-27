@@ -27,9 +27,9 @@
             <div class="logo">ModelPro</div>
             <div class="navbar_navigation">
                 <ul class="menu">
-                    <li><a href="#" class="active">Trang Chủ</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Sản phẩm</a></li>
+                    <router-link to="/"><a href="#">Trang Chủ</a></router-link>
+                    <router-link to="/about"><a href="#">Giới thiệu</a></router-link>
+                    <router-link to="/product"><a href="#">Sản phẩm</a></router-link>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
                 <button class="visit-btn">

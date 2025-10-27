@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Mercedes C200",
+      "brand": "Mercedes",
+      "price": "1.800.000.000 VNĐ",
+      "image": "mercedes-01.png"
+    },
+    {
+      "id": 2,
+      "name": "BMW X3",
+      "brand": "BMW",
+      "price": "1.200.000.000 VNĐ",
+      "image": "bmw-01.png"
+    },
+    {
+      "id": 3,
+      "name": "Audi A3",
+      "brand": "Audi",
+      "price": "1.500.000.000 VNĐ",
+      "image": "audi-01.png"
+    }
+  ]
+}
