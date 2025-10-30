@@ -55,6 +55,104 @@
       "brand": "BMW",
       "price": "8.000.000.000 VNĐ",
       "image": "bmw-02.png"
+    },
+    {
+      "id": 9,
+      "name": "Audi A7 Sport Back",
+      "brand": "Audi",
+      "price": "7.800.000.000 VNĐ",
+      "image": "audi-03.png"
+    },
+    {
+      "id": 10,
+      "name": "Audi Q8",
+      "brand": "Audi",
+      "price": "4.200.000.000 VNĐ",
+      "image": "audi-04.png"
+    },
+    {
+      "id": 11,
+      "name": "BMW 8 Seires",
+      "brand": "BMW",
+      "price": "9.800.000.000 VNĐ",
+      "image": "bmw-03.png"
+    },
+    {
+      "id": 12,
+      "name": "BMW 5 Seires",
+      "brand": "BMW",
+      "price": "5.200.000.000 VNĐ",
+      "image": "bmw-04.png"
+    },
+    {
+      "id": 13,
+      "name": "BMW M4 Coupe",
+      "brand": "BMW",
+      "price": "5.360.000.000 VNĐ",
+      "image": "bmw-05.png"
+    },
+    {
+      "id": 14,
+      "name": "Mercedes C300",
+      "brand": "Mercedes",
+      "price": "2.100.000.000 VNĐ",
+      "image": "mercedes-03.png"
+    },
+    {
+      "id": 15,
+      "name": "Mercedes GLC200",
+      "brand": "Mercedes",
+      "price": "1.800.000.000 VNĐ",
+      "image": "mercedes-04.png"
+    },
+    {
+      "id": 16,
+      "name": "Mercedes GLS450",
+      "brand": "Mercedes",
+      "price": "7.800.000.000 VNĐ",
+      "image": "mercedes-05.png"
+    },
+    {
+      "id": 17,
+      "name": "Mercedes MayBach S680",
+      "brand": "Mercedes",
+      "price": "8.000.000.000 VNĐ",
+      "image": "bmw-02.png"
+    },
+    {
+      "id": 18,
+      "name": "Porsche Panamera",
+      "brand": "Porsche",
+      "price": "6.420.000.000 VNĐ",
+      "image": "porsche-02.png"
+    },
+    {
+      "id": 19,
+      "name": "Porsche Cayenne",
+      "brand": "Porsche",
+      "price": "4.200.000.000 VNĐ",
+      "image": "porsche-03.png"
+    },
+    {
+      "id": 20,
+      "name": "Rolls-Royce PhamTom XII",
+      "brand": "Rolls-Royce",
+      "price": "80.000.000.000 VNĐ",
+      "image": "rr-02.png"
+    },
+    {
+      "id": 21,
+      "name": "Rolls-Royce Spectre",
+      "brand": "BMW",
+      "price": "45.000.000.000 VNĐ",
+      "image": "rr-03.png"
+    },
+    {
+      "id": 22,
+      "name": "Rolls-Royce Ghost",
+      "brand": "Rolls-Royce",
+      "price": "40.000.000.000 VNĐ",
+      "image": "rr-04.png"
     }
   ]
 }
