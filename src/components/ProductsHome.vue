@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <div class="layout">
-            <h1>Sản phẩm nổi bật</h1>
-            <ProductsList />
-        </div>
+    <div class="layout">
+        <h1>Sản phẩm nổi bật</h1>
+        <ProductsList />
     </div>
 </template>
 
@@ -14,6 +12,7 @@ import ProductsList from './ProductsList.vue';
 
 <style>
     .layout{
-        height: 100vh;
+        max-width: 1380px;
+        margin: auto;
     }
 </style>

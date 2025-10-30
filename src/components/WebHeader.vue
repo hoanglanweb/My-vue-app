@@ -25,28 +25,44 @@
         <!-- Navigation -->
         <nav class="navbar">
             <div class="logo">ModelPro</div>
+
             <div class="navbar_navigation">
                 <ul class="menu">
-                    <router-link to="/"><a href="#">Trang Chủ</a></router-link>
-                    <router-link to="/about"><a href="#">Giới thiệu</a></router-link>
-                    <router-link to="/product"><a href="#">Sản phẩm</a></router-link>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><router-link to="/">Trang Chủ</router-link></li>
+                    <li><router-link to="/about">Giới thiệu</router-link></li>
+                    <li class="dropdown">
+                        <router-link to="/product">Sản phẩm</router-link>
+                        <ul class="dropdown-menu">
+                            <li><router-link
+                                    :to="{ path: '/product', query: { brand: 'Mercedes' } }">Mercedes</router-link></li>
+                            <li><router-link :to="{ path: '/product', query: { brand: 'Audi' } }">Audi</router-link>
+                            </li>
+                            <li><router-link :to="{ path: '/product', query: { brand: 'BMW' } }">BMW</router-link></li>
+                            <li><router-link
+                                    :to="{ path: '/product', query: { brand: 'Rolls-Royce' } }">Rolls-Royce</router-link>
+                            </li>
+                            <li><router-link
+                                    :to="{ path: '/product', query: { brand: 'Porsche' } }">Porsche</router-link></li>
+                        </ul>
+                    </li>
+
+                    <li><router-link to="/contact">Liên hệ</router-link></li>
                 </ul>
+
                 <button class="visit-btn">
                     <span class="icon-circle">
                         <i class="fa-solid fa-calendar-alt"></i>
                     </span>
-                    Schedule a visit
+                    Tìm hiểu thêm
                 </button>
             </div>
         </nav>
+
     </header>
 </template>
 
-<script>
-export default {
-    name: 'WebHeader',
-}
+<script setup>
+
 </script>
 
 <style scoped>
@@ -116,48 +132,121 @@ header {
 
 /* --- NAVBAR --- */
 .navbar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 60px;
+    padding: 14px 50px;
+    font-family: "Poppins", sans-serif;
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
 }
-.navbar_navigation{
+
+.navbar_navigation {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 750px;
+    gap: 2rem;
 }
+
 .menu {
     list-style: none;
     display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.menu a {
-    text-decoration: none;
+.menu li {
+    position: relative;
+}
+
+.menu a,
+.menu router-link {
     color: #000;
+    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s ease;
+    font-size: 20px;
 }
 
-.menu a:hover {
-    color: #ff5b00;
+.menu a:hover,
+.router-link-active {
+    color: orange;
 }
 
-.menu a.active {
-    color: #ff5b00;
+/* DROP DOWN */
+.dropdown {
+    position: relative;
 }
 
-.blur{
-    border: 1px solid rgba(128, 128, 128, 0.249);
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 180px;
+    border-radius: 6px;
+    z-index: 999;
+}
+
+/* hiển thị khi hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    color: #ffce00;
+}
+
+/* Nút Schedule */
+.visit-btn {
+    background-color: #ffce00;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.visit-btn:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+.icon-circle {
+    background-color: #111;
+    color: #ffce00;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* --- BUTTON --- */

@@ -20,6 +20,41 @@
       "brand": "Audi",
       "price": "1.500.000.000 VNĐ",
       "image": "audi-01.png"
+    },
+    {
+      "id": 4,
+      "name": "Mercedes S450 Luxury",
+      "brand": "Mercedes",
+      "price": "7.500.000.000 VNĐ",
+      "image": "mercedes-02.png"
+    },
+    {
+      "id": 5,
+      "name": "Porsche 911",
+      "brand": "Porsche",
+      "price": "11.500.000.000 VNĐ",
+      "image": "porsche-01.png"
+    },
+    {
+      "id": 6,
+      "name": "Rolls-Royce Cullinan",
+      "brand": "Rolls-Royce",
+      "price": "60.000.000.000 VNĐ",
+      "image": "rr-01.png"
+    },
+    {
+      "id": 7,
+      "name": "Audi A8L",
+      "brand": "Audi",
+      "price": "60.000.000.000 VNĐ",
+      "image": "audi-02.png"
+    },
+    {
+      "id": 8,
+      "name": "BMW 7 Seires",
+      "brand": "BMW",
+      "price": "8.000.000.000 VNĐ",
+      "image": "bmw-02.png"
     }
   ]
 }
