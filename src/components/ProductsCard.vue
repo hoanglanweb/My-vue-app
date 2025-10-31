@@ -1,6 +1,5 @@
 <template>
-    <div class="card shadow-sm border-1 h-100 text-center"
-        style="width: 28rem; border-radius: 12px; overflow: hidden;">
+    <div class="card shadow-sm border-1 h-100 text-center" style="width: 28rem; border-radius: 12px; overflow: hidden;">
         <img :src="require(`@/assets/product/${product.image}`)" class="card-img-top img-fluid" alt="ảnh xe"
             style="height: 200px; object-fit: cover;" />
 
@@ -10,7 +9,7 @@
                 <p class="card-text text-muted small mb-3">{{ product.brand }}</p>
             </div>
 
-            <a href="#" class="btn btn-primary px-4 py-2 mt-auto">
+            <a href="#" class="btn btn-primary px-4 py-2 mt-auto" @click="goToDetails">
                 Tìm Hiểu Thêm
             </a>
         </div>
@@ -20,8 +19,12 @@
 
 <script setup>
 import { defineProps } from "vue";
-
-defineProps({
+import { useRouter } from "vue-router";
+const router = useRouter()
+const goToDetails = () => {
+    router.push(`/product/${props.product.id}`)
+}
+const props = defineProps({
     product: {
         type: Object,
         required: true,

@@ -5,154 +5,330 @@
       "name": "Mercedes C200",
       "brand": "Mercedes",
       "price": "1.800.000.000 VNĐ",
-      "image": "mercedes-01.png"
+      "image": "mercedes-01.png",
+      "description": "Mercedes C200 mang đến cảm giác lái sang trọng, nội thất cao cấp, động cơ mạnh mẽ và nhiều tính năng hỗ trợ lái tiên tiến.",
+      "introduction": "Mercedes-Benz C200 là mẫu sedan hạng sang sở hữu thiết kế tinh tế, hiệu suất mạnh mẽ cùng công nghệ tiên tiến. Xe được trang bị hộp số tự động 9 cấp, hệ thống đèn LED thông minh và các tính năng an toàn hiện đại như hỗ trợ phanh tự động, cảnh báo va chạm, kiểm soát hành trình thích ứng,... đem đến trải nghiệm lái thoải mái và an tâm tuyệt đối.",
+      "details": {
+        "capacity": "204 mã lực",
+        "maxspeed": "240 km/h",
+        "engine": "1.5L Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 2,
       "name": "BMW X3",
       "brand": "BMW",
       "price": "1.200.000.000 VNĐ",
-      "image": "bmw-01.png"
+      "image": "bmw-01.png",
+      "description": "BMW X3 là dòng SUV thể thao, kết hợp giữa hiệu suất mạnh mẽ và thiết kế năng động.",
+      "introduction": "BMW X3 là chiếc SUV thể thao đa dụng mang đậm DNA BMW, nổi bật với khả năng vận hành mạnh mẽ, linh hoạt trên mọi cung đường. Khoang nội thất được thiết kế tinh tế, hướng đến người lái với vật liệu cao cấp và công nghệ hiện đại như hệ thống iDrive thông minh, hỗ trợ đỗ xe tự động và kết nối Apple CarPlay.",
+      "details": {
+        "capacity": "184 mã lực",
+        "maxspeed": "215 km/h",
+        "engine": "2.0L Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 3,
       "name": "Audi A3",
       "brand": "Audi",
       "price": "1.500.000.000 VNĐ",
-      "image": "audi-01.png"
+      "image": "audi-01.png",
+      "description": "Audi A3 mang phong cách trẻ trung, hiện đại với công nghệ tiên tiến và cảm giác lái thể thao.",
+      "introduction": "Audi A3 là mẫu sedan hạng sang cỡ nhỏ nổi bật với phong cách trẻ trung, năng động và công nghệ tiên tiến. Xe được trang bị hệ thống đèn LED Matrix, màn hình kỹ thuật số Virtual Cockpit và hệ thống âm thanh cao cấp, mang đến trải nghiệm lái thể thao và hiện đại dành cho người thành đạt trẻ tuổi.",
+      "details": {
+        "capacity": "150 mã lực",
+        "maxspeed": "210 km/h",
+        "engine": "1.4L TFSI",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 4,
       "name": "Mercedes S450 Luxury",
       "brand": "Mercedes",
       "price": "7.500.000.000 VNĐ",
-      "image": "mercedes-02.png"
+      "image": "mercedes-02.png",
+      "description": "Mercedes S450 Luxury là dòng sedan hạng sang cao cấp, hội tụ đỉnh cao công nghệ và sự thoải mái.",
+      "introduction": "Mercedes-Benz S450 Luxury là biểu tượng của sự xa hoa và đẳng cấp trong phân khúc sedan hạng sang. Xe sở hữu nội thất bọc da cao cấp, ghế massage chỉnh điện, cửa sổ trời toàn cảnh và hệ thống giải trí MBUX tiên tiến. Động cơ V6 mạnh mẽ kết hợp hệ thống treo khí nén mang lại cảm giác lái êm ái vượt trội.",
+      "details": {
+        "capacity": "367 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "3.0L V6 Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 5,
       "name": "Porsche 911",
       "brand": "Porsche",
       "price": "11.500.000.000 VNĐ",
-      "image": "porsche-01.png"
+      "image": "porsche-01.png",
+      "description": "Porsche 911 là biểu tượng thể thao với hiệu suất vượt trội và thiết kế kinh điển.",
+      "introduction": "Porsche 911 là huyền thoại của làng xe thể thao với hơn 50 năm lịch sử. Thiết kế mang đậm phong cách cổ điển nhưng được tái hiện bằng công nghệ hiện đại, kết hợp với động cơ mạnh mẽ phía sau và khả năng tăng tốc ấn tượng. Đây là mẫu xe dành cho những ai yêu thích tốc độ, cảm xúc và sự tinh tế đến từng chi tiết.",
+      "details": {
+        "capacity": "450 mã lực",
+        "maxspeed": "308 km/h",
+        "engine": "3.0L Twin-Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 6,
       "name": "Rolls-Royce Cullinan",
       "brand": "Rolls-Royce",
       "price": "60.000.000.000 VNĐ",
-      "image": "rr-01.png"
+      "image": "rr-01.png",
+      "description": "Rolls-Royce Cullinan là SUV siêu sang mang đến sự xa hoa, yên tĩnh và quyền lực.",
+      "introduction": "Rolls-Royce Cullinan là mẫu SUV siêu sang đầu tiên của hãng, được ví như một 'cung điện di động'. Xe mang đến không gian nội thất sang trọng tuyệt đối với vật liệu thủ công cao cấp, hệ thống cách âm hoàn hảo và khả năng vận hành mạnh mẽ trên mọi địa hình nhờ khối động cơ V12 6.75L. Đây là lựa chọn dành cho những người thực sự thượng lưu.",
+      "details": {
+        "capacity": "563 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "6.75L V12",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 7,
       "name": "Audi A8L",
       "brand": "Audi",
       "price": "60.000.000.000 VNĐ",
-      "image": "audi-02.png"
+      "image": "audi-02.png",
+      "description": "Audi A8L là mẫu sedan hạng sang cỡ lớn với khoang nội thất hiện đại, sang trọng.",
+      "introduction": "Audi A8L là đỉnh cao công nghệ của thương hiệu Audi, mang đến trải nghiệm sang trọng và hiện đại tuyệt đối. Xe được trang bị hệ thống lái tự động cấp độ cao, ghế ngồi có chức năng massage, điều hòa độc lập từng vùng và vật liệu da cao cấp. Đây là mẫu xe dành cho doanh nhân yêu thích sự tinh tế và công nghệ tiên phong.",
+      "details": {
+        "capacity": "335 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "3.0L V6 TFSI",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 8,
       "name": "BMW 7 Seires",
       "brand": "BMW",
       "price": "8.000.000.000 VNĐ",
-      "image": "bmw-02.png"
+      "image": "bmw-02.png",
+      "description": "BMW 7 Series mang đến đẳng cấp sang trọng và công nghệ lái đỉnh cao.",
+      "introduction": "BMW 7 Series là sedan hạng sang cỡ lớn kết hợp hoàn hảo giữa sự sang trọng và công nghệ đột phá. Xe có khoang nội thất xa hoa với hệ thống điều khiển bằng cử chỉ, màn hình cảm ứng kép và ghế thương gia phía sau có chức năng massage. Động cơ mạnh mẽ và hệ thống treo chủ động giúp mọi hành trình trở nên êm ái và đẳng cấp.",
+      "details": {
+        "capacity": "340 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "3.0L TwinPower Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 9,
       "name": "Audi A7 Sport Back",
       "brand": "Audi",
       "price": "7.800.000.000 VNĐ",
-      "image": "audi-03.png"
+      "image": "audi-03.png",
+      "description": "Audi A7 Sportback kết hợp giữa thiết kế coupe thể thao và sự tiện nghi của sedan.",
+      "introduction": "Audi A7 Sportback là sự hòa quyện tinh tế giữa thiết kế coupe thể thao và sự sang trọng của sedan. Xe sở hữu đường nét mềm mại, đèn LED Matrix hiện đại cùng nội thất cao cấp. Công nghệ lái tiên tiến, hệ thống treo thích ứng và động cơ mạnh mẽ mang lại trải nghiệm lái êm ái, đầy cảm xúc.",
+      "details": {
+        "capacity": "340 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "3.0L V6 TFSI",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 10,
       "name": "Audi Q8",
       "brand": "Audi",
       "price": "4.200.000.000 VNĐ",
-      "image": "audi-04.png"
+      "image": "audi-04.png",
+      "description": "Audi Q8 là SUV coupe sang trọng với thiết kế mạnh mẽ và công nghệ tiên tiến.",
+      "introduction": "Audi Q8 là mẫu SUV coupe hạng sang mang phong cách thể thao và hiện đại. Thiết kế ngoại thất táo bạo, lưới tản nhiệt lớn kết hợp cùng cụm đèn LED ma trận tạo nên vẻ ngoài đầy uy lực. Khoang lái trang bị hệ thống giải trí MMI tiên tiến, nội thất da cao cấp và công nghệ hỗ trợ người lái hàng đầu phân khúc.",
+      "details": {
+        "capacity": "340 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "3.0L Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 11,
       "name": "BMW 8 Seires",
       "brand": "BMW",
       "price": "9.800.000.000 VNĐ",
-      "image": "bmw-03.png"
+      "image": "bmw-03.png",
+      "description": "BMW 8 Series là mẫu coupe thể thao hạng sang mang đến sự hoàn hảo giữa tốc độ và đẳng cấp.",
+      "introduction": "BMW 8 Series là chiếc coupe thể thao hạng sang thể hiện sự hoàn hảo giữa hiệu suất và thiết kế. Được trang bị động cơ V8 Twin-Turbo mạnh mẽ, xe có khả năng tăng tốc cực nhanh, cùng hệ thống dẫn động bốn bánh toàn thời gian xDrive mang lại khả năng bám đường vượt trội. Nội thất đậm chất thể thao với chất liệu da Merino cao cấp.",
+      "details": {
+        "capacity": "523 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "4.4L V8 Twin-Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 12,
       "name": "BMW 5 Seires",
       "brand": "BMW",
       "price": "5.200.000.000 VNĐ",
-      "image": "bmw-04.png"
+      "image": "bmw-04.png",
+      "description": "BMW 5 Series là sedan hạng sang tầm trung nổi bật với phong cách hiện đại và hiệu năng cao.",
+      "introduction": "BMW 5 Series là mẫu sedan hạng sang tầm trung được thiết kế hướng đến doanh nhân hiện đại. Xe sở hữu phong cách thể thao, sang trọng và được tích hợp nhiều công nghệ như hỗ trợ đỗ xe tự động, màn hình HUD hiển thị thông tin lái, cùng hệ thống âm thanh Harman Kardon. Đây là lựa chọn lý tưởng cho những ai yêu sự cân bằng giữa tiện nghi và hiệu suất.",
+      "details": {
+        "capacity": "252 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "2.0L Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 13,
       "name": "BMW M4 Coupe",
       "brand": "BMW",
       "price": "5.360.000.000 VNĐ",
-      "image": "bmw-05.png"
+      "image": "bmw-05.png",
+      "description": "BMW M4 Coupe mang DNA thể thao thuần khiết với sức mạnh và cảm xúc lái mãnh liệt.",
+      "introduction": "BMW M4 Coupe là biểu tượng của hiệu năng và cảm xúc lái thuần khiết. Xe được trang bị động cơ 3.0L Twin-Turbo công suất cao, hộp số ly hợp kép 8 cấp và hệ thống treo thể thao thích ứng. Thiết kế khí động học, ghế thể thao carbon và hệ thống xả thể thao mang lại trải nghiệm lái đậm chất M.",
+      "details": {
+        "capacity": "480 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "3.0L Twin-Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 14,
       "name": "Mercedes C300",
       "brand": "Mercedes",
       "price": "2.100.000.000 VNĐ",
-      "image": "mercedes-03.png"
+      "image": "mercedes-03.png",
+      "description": "Mercedes C300 sở hữu phong cách thể thao, vận hành linh hoạt và nội thất sang trọng.",
+      "introduction": "Mercedes-Benz C300 là mẫu sedan thể thao hạng sang mang đến sự cân bằng hoàn hảo giữa hiệu suất và sự tinh tế. Xe được trang bị động cơ tăng áp 2.0L mạnh mẽ, hộp số 9G-Tronic và hệ dẫn động 4MATIC tùy chọn. Nội thất được hoàn thiện tinh xảo, cùng màn hình giải trí trung tâm OLED 11.9 inch và hệ thống đèn viền nội thất 64 màu đặc trưng.",
+      "details": {
+        "capacity": "258 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "2.0L Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 15,
       "name": "Mercedes GLC200",
       "brand": "Mercedes",
       "price": "1.800.000.000 VNĐ",
-      "image": "mercedes-04.png"
+      "image": "mercedes-04.png",
+      "description": "Mercedes GLC200 là SUV hạng sang đa dụng, thiết kế tinh tế, nội thất rộng rãi.",
+      "introduction": "Mercedes-Benz GLC200 là mẫu SUV hạng sang kết hợp giữa thiết kế thanh lịch và khả năng vận hành linh hoạt. Xe được trang bị động cơ tăng áp 2.0L, hệ thống treo êm ái và chế độ lái đa dạng. Nội thất rộng rãi với ghế bọc da cao cấp, cửa sổ trời toàn cảnh và hệ thống giải trí MBUX thông minh giúp nâng tầm trải nghiệm người dùng.",
+      "details": {
+        "capacity": "197 mã lực",
+        "maxspeed": "215 km/h",
+        "engine": "2.0L Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 16,
       "name": "Mercedes GLS450",
       "brand": "Mercedes",
       "price": "7.800.000.000 VNĐ",
-      "image": "mercedes-05.png"
+      "image": "mercedes-05.png",
+      "description": "Mercedes GLS450 là SUV cỡ lớn với khả năng vận hành mạnh mẽ và tiện nghi cao cấp.",
+      "introduction": "Mercedes-Benz GLS450 là chiếc SUV 7 chỗ hạng sang hàng đầu với không gian rộng rãi và tiện nghi cao cấp. Xe trang bị động cơ I6 3.0L Turbo mạnh mẽ, hệ dẫn động 4MATIC toàn thời gian và hệ thống treo khí nén AIRMATIC. Khoang nội thất đẳng cấp với ghế massage, hệ thống âm thanh Burmester và điều hòa tự động đa vùng.",
+      "details": {
+        "capacity": "367 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "3.0L I6 Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 17,
       "name": "Mercedes MayBach S680",
       "brand": "Mercedes",
       "price": "8.000.000.000 VNĐ",
-      "image": "bmw-02.png"
+      "image": "bmw-02.png",
+      "description": "Mercedes-Maybach S680 là biểu tượng của sự xa hoa và quyền lực tối thượng.",
+      "introduction": "Mercedes-Maybach S680 là biểu tượng tối thượng của sự xa hoa và quyền lực. Xe được chế tác thủ công tinh xảo, trang bị động cơ V12 Biturbo mạnh mẽ và khoang nội thất êm ái như khoang hạng nhất máy bay. Mỗi chi tiết đều được chăm chút để mang lại trải nghiệm đỉnh cao về sự sang trọng và yên tĩnh tuyệt đối.",
+      "details": {
+        "capacity": "612 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "6.0L V12 Biturbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 18,
       "name": "Porsche Panamera",
       "brand": "Porsche",
       "price": "6.420.000.000 VNĐ",
-      "image": "porsche-02.png"
+      "image": "porsche-02.png",
+      "description": "Porsche Panamera kết hợp giữa sự tiện nghi của sedan và hiệu năng của xe thể thao.",
+      "introduction": "Porsche Panamera là mẫu xe sedan hiệu năng cao mang DNA thể thao đặc trưng của Porsche. Xe sở hữu kiểu dáng coupe thanh lịch, động cơ mạnh mẽ cùng hệ thống treo chủ động giúp cân bằng giữa sự êm ái và tốc độ. Nội thất tinh tế với màn hình cảm ứng trung tâm và hệ thống âm thanh Bose cao cấp.",
+      "details": {
+        "capacity": "330 mã lực",
+        "maxspeed": "270 km/h",
+        "engine": "2.9L Twin-Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 19,
       "name": "Porsche Cayenne",
       "brand": "Porsche",
       "price": "4.200.000.000 VNĐ",
-      "image": "porsche-03.png"
+      "image": "porsche-03.png",
+      "description": "Porsche Cayenne là SUV thể thao cao cấp, kết hợp hiệu năng mạnh mẽ và sự sang trọng.",
+      "introduction": "Porsche Cayenne là SUV thể thao hạng sang kết hợp giữa sức mạnh, sự linh hoạt và đẳng cấp. Xe có khả năng tăng tốc ấn tượng, cảm giác lái phấn khích cùng nội thất sang trọng. Hệ thống lái trợ lực điện, treo khí nén và chế độ lái off-road giúp Cayenne chinh phục mọi cung đường.",
+      "details": {
+        "capacity": "340 mã lực",
+        "maxspeed": "245 km/h",
+        "engine": "3.0L Turbo",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 20,
       "name": "Rolls-Royce PhamTom XII",
       "brand": "Rolls-Royce",
       "price": "80.000.000.000 VNĐ",
-      "image": "rr-02.png"
+      "image": "rr-02.png",
+      "description": "Rolls-Royce Phantom XII là đỉnh cao của nghệ thuật chế tác và sự tinh tế tuyệt đối.",
+      "introduction": "Rolls-Royce Phantom XII được ví như đỉnh cao của sự hoàn mỹ và sang trọng trong thế giới xe hơi. Xe được chế tác thủ công tỉ mỉ với vật liệu quý hiếm, khoang nội thất yên tĩnh gần như tuyệt đối và động cơ V12 6.75L mạnh mẽ. Đây là chiếc xe dành riêng cho giới thượng lưu yêu sự tinh tế và quyền lực.",
+      "details": {
+        "capacity": "563 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "6.75L V12",
+        "fuel": "Xăng"
+      }
     },
     {
       "id": 21,
       "name": "Rolls-Royce Spectre",
-      "brand": "BMW",
+      "brand": "Rolls-Royce",
       "price": "45.000.000.000 VNĐ",
-      "image": "rr-03.png"
+      "image": "rr-03.png",
+      "description": "Rolls-Royce Spectre – mẫu coupe chạy điện siêu sang đầu tiên trên thế giới.",
+      "introduction": "Rolls-Royce Spectre là chiếc coupe chạy điện siêu sang đầu tiên, đánh dấu kỷ nguyên mới của hãng. Thiết kế uy nghi, khí động học hoàn hảo cùng hệ thống truyền động điện mạnh mẽ giúp xe vận hành êm ái và yên tĩnh. Nội thất thủ công tinh xảo, đèn trần Starlight nổi tiếng mang đến trải nghiệm như du hành giữa những vì sao.",
+      "details": {
+        "capacity": "577 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "Điện",
+        "fuel": "Điện"
+      }
     },
     {
       "id": 22,
       "name": "Rolls-Royce Ghost",
       "brand": "Rolls-Royce",
       "price": "40.000.000.000 VNĐ",
-      "image": "rr-04.png"
+      "image": "rr-04.png",
+      "description": "Rolls-Royce Ghost mang đến trải nghiệm lái yên tĩnh, sang trọng và quyền quý.",
+      "introduction": "Rolls-Royce Ghost mang trong mình triết lý 'Post Opulence' – sự sang trọng tinh giản. Xe vẫn giữ nguyên những giá trị cốt lõi như động cơ V12 mạnh mẽ, khả năng cách âm hoàn hảo và nội thất thủ công đẳng cấp. Đây là lựa chọn lý tưởng cho những chủ nhân muốn khẳng định đẳng cấp một cách tinh tế và khiêm nhường.",
+      "details": {
+        "capacity": "563 mã lực",
+        "maxspeed": "250 km/h",
+        "engine": "6.75L V12",
+        "fuel": "Xăng"
+      }
     }
   ]
 }

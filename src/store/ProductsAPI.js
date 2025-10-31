@@ -5,6 +5,7 @@ import { defineStore } from "pinia";
 export const useProductStore = defineStore("product", {
   state: () => ({
     product: [],
+    productsdetail: null,
     error: null,
   }),
   actions: {
@@ -18,5 +19,15 @@ export const useProductStore = defineStore("product", {
         console.log("dữ liệu bị lỗi :", error);
       }
     },
+  },
+  async fetchProductDetails(id) {
+    try {
+      const res = await axios.get(`${APIURL}/product/${id}`);
+      this.productsdetail = res.data;
+      this.error = null;
+    } catch (error) {
+      this.error = error;
+      this.productsdetail = null;
+    }
   },
 });

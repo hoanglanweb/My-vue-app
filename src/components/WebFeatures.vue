@@ -6,14 +6,14 @@
             <img src="../assets/logo-bmw.png" alt="">
         </div>
         <div class="blur"></div>
-        <h1 class="text">The Ultimate Driving Experience</h1>
+        <h1 class="text" style="text-align: center;">The Ultimate Driving Experience</h1>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 column-1">
                     <img src="../assets/images/features-01.jpg" alt="">
                 </div>
                 <div class="col-lg-5 column-2">
-                    <h1>Our Greatest Car Sellers</h1>
+                    <h1 style="text-align: center;">Our Greatest Car Sellers</h1>
                     <div v-for="item in featuresContent" :key="item.id" class="feature-box">
                         <!-- Tiêu đề có thể click -->
                         <div class="header" @click="toggleBox(item.id)">

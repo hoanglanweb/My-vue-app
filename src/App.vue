@@ -20,17 +20,13 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 * {
+  
+  /* text-align: center; */
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
   list-style: none;
 }
 </style>

@@ -33,16 +33,11 @@
                     <li class="dropdown">
                         <router-link to="/product">Sản phẩm</router-link>
                         <ul class="dropdown-menu">
-                            <li><router-link
-                                    :to="{ path: '/product', query: { brand: 'Mercedes' } }">Mercedes</router-link></li>
-                            <li><router-link :to="{ path: '/product', query: { brand: 'Audi' } }">Audi</router-link>
+                            <li v-for="brand in brands" :key="brand">
+                                <router-link :to="{ path: '/product', query: { brand } }">
+                                    {{ brand }}
+                                </router-link>
                             </li>
-                            <li><router-link :to="{ path: '/product', query: { brand: 'BMW' } }">BMW</router-link></li>
-                            <li><router-link
-                                    :to="{ path: '/product', query: { brand: 'Rolls-Royce' } }">Rolls-Royce</router-link>
-                            </li>
-                            <li><router-link
-                                    :to="{ path: '/product', query: { brand: 'Porsche' } }">Porsche</router-link></li>
                         </ul>
                     </li>
 
@@ -62,7 +57,8 @@
 </template>
 
 <script setup>
-
+import data from '@/data/products.json'
+const brands = [...new Set(data.products.map(item => item.brand))]
 </script>
 
 <style scoped>
@@ -176,7 +172,7 @@ header {
 
 .menu a:hover,
 .router-link-active {
-    color: orange;
+    color: orangered;
 }
 
 /* DROP DOWN */
@@ -193,7 +189,7 @@ header {
     list-style: none;
     margin: 0;
     padding: 10px 0;
-    min-width: 180px;
+    min-width: 360px;
     border-radius: 6px;
     z-index: 999;
 }
@@ -215,7 +211,7 @@ header {
 }
 
 .dropdown-menu li a:hover {
-    color: #ffce00;
+    color: orangered;
 }
 
 /* Nút Schedule */
