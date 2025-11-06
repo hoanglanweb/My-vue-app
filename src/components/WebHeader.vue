@@ -23,12 +23,11 @@
         </div>
         <div class="blur"></div>
         <!-- Navigation -->
-        <nav class="navbar">
-            <div class="logo">ModelPro</div>
+        <nav class="navbar-menu">
+            <div class="logo"><router-link to="/">ModelPro</router-link></div>
 
             <div class="navbar_navigation">
                 <ul class="menu">
-                    <li><router-link to="/">Trang Chủ</router-link></li>
                     <li><router-link to="/about">Giới thiệu</router-link></li>
                     <li class="dropdown">
                         <router-link to="/product">Sản phẩm</router-link>
@@ -40,16 +39,10 @@
                             </li>
                         </ul>
                     </li>
-
                     <li><router-link to="/contact">Liên hệ</router-link></li>
+                    <li><a href="">Đăng ký</a></li>
+                    <li><a href="">Đăng nhập</a></li>
                 </ul>
-
-                <button class="visit-btn">
-                    <span class="icon-circle">
-                        <i class="fa-solid fa-calendar-alt"></i>
-                    </span>
-                    Tìm hiểu thêm
-                </button>
             </div>
         </nav>
 
@@ -78,7 +71,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 8px 60px;
-    font-size: 14px;
+    font-size: 26px;
     color: #666;
 }
 
@@ -116,8 +109,8 @@ header {
     justify-content: center;
     cursor: pointer;
     transition: color 0.3s;
-    width: 34px;
-    height: 30px;
+    width: 45px;
+    height: 40px;
     background-color: #cdcdcdb0;
     border-radius: 50%;
 }
@@ -127,19 +120,19 @@ header {
 }
 
 /* --- NAVBAR --- */
-.navbar {
+.navbar-menu {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 50px;
-    font-family: "Poppins", sans-serif;
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #000;
+    text-decoration: none;
 }
 
 .navbar_navigation {
@@ -167,7 +160,7 @@ header {
     padding: 10px;
     display: block;
     transition: color 0.3s ease;
-    font-size: 20px;
+    font-size: 1.6rem;
 }
 
 .menu a:hover,

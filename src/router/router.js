@@ -3,6 +3,7 @@ import WebMain from "@/components/WebMain.vue";
 import About from "@/pages/about.vue";
 import ProductsDetails from "@/components/ProductsDetails.vue";
 import prduct from "@/pages/prduct.vue";
+import ContactPage from "@/pages/contactPage.vue";
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     name: "Product",
     component: prduct,
     props: true,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: ContactPage,
   },
   {
     path: "/product/:id",

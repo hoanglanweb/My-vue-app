@@ -34,8 +34,8 @@
                 </div>
 
                 <div class="btn-group">
-                    <button class="btn buy-now">Mua ngay</button>
-                    <button class="btn add-cart">Thêm vào giỏ hàng</button>
+                    <button class="btn buy-now">Đăng ký lái thử</button>
+                    <button class="btn add-cart">Tư vấn chi tiết</button>
                 </div>
             </div>
         </div>
@@ -61,9 +61,10 @@ const store = useProductStore()
 
 onMounted(() => {
     store.fetchProduct()
+    console.log(store.product)
 })
 const product = computed(() => {
-    return store.product.find((p) => p.id === parseInt(route.params.id))
+    return store.product.find((p) => p.id == parseInt(route.params.id))
 })
 </script>
 
@@ -92,14 +93,14 @@ const product = computed(() => {
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 .price {
     color: #e63946;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -108,6 +109,8 @@ const product = computed(() => {
     color: #555;
     margin-bottom: 2rem;
     line-height: 1.6;
+    font-size: 1.75rem;
+    font-weight: 600;
 }
 
 .item-2__col {
@@ -129,12 +132,14 @@ const product = computed(() => {
 
 .spec-label {
     font-weight: 500;
+    font-size: 1.5rem;
     color: #333;
 }
 
 .spec-value {
     color: #111;
     font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .btn-group {
@@ -148,7 +153,7 @@ const product = computed(() => {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
@@ -180,5 +185,8 @@ const product = computed(() => {
 
 .ProductsDetails-Description h2 {
     margin-bottom: 1rem;
+}
+.ProductsDetails-Description p{
+    font-size: 1.5rem;
 }
 </style>

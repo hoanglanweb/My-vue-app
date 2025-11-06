@@ -4,27 +4,29 @@
             <img src="../assets/logo-audi.png" alt="">
             <img src="../assets/logo-mer.png" alt="">
             <img src="../assets/logo-bmw.png" alt="">
+            <img src="../assets/logo-rr.png" alt="">
+            <img src="../assets/logo-porsche.png" alt="">
         </div>
         <div class="blur"></div>
-        <h1 class="text" style="text-align: center;">The Ultimate Driving Experience</h1>
+        <h1 class="text" style="text-align: center; font-size: 5rem;">The Ultimate Driving Experience</h1>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 column-1">
                     <img src="../assets/images/features-01.jpg" alt="">
                 </div>
                 <div class="col-lg-5 column-2">
-                    <h1 style="text-align: center;">Our Greatest Car Sellers</h1>
+                    <h1 style="text-align: center; font-size: 3rem;">Our Greatest Car Sellers</h1>
                     <div v-for="item in featuresContent" :key="item.id" class="feature-box">
                         <!-- Tiêu đề có thể click -->
                         <div class="header" @click="toggleBox(item.id)">
-                            <p class="title">{{ item.title }}</p>
+                            <p class="title" style="font-size: 1.35rem;">{{ item.title }}</p>
                             <span>{{ activeBox === item.id ? '' : '' }}</span>
                         </div>
 
                         <!-- Nội dung ẩn/hiện theo hộp đang mở -->
                         <transition name="slide">
                             <div v-if="activeBox === item.id" class="content">
-                                <p>{{ item.content }}</p>
+                                <p style="font-size: 1.2rem;">{{ item.content }}</p>
                             </div>
                         </transition>
                     </div>
@@ -109,8 +111,13 @@ function toggleBox(id) {
     gap: 12rem;
 }
 .logo-banner img{
-    width: 25%;
-    filter: opacity(0.6);
+    width: 23%;
+    filter: opacity(0.5);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.logo-banner img:hover{
+    filter: opacity(1);
 }
 .container {
     max-width: 1300px;

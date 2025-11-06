@@ -5,11 +5,10 @@
 
         <div class="card-body d-flex flex-column justify-content-between">
             <div>
-                <h5 class="card-title fw-semibold text-dark mt-2">{{ product.name }}</h5>
-                <p class="card-text text-muted small mb-3">{{ product.brand }}</p>
+                <h5 class="card-title fw-blod text-dark mt-2 fs-1">{{ product.name }}</h5>
             </div>
 
-            <a href="#" class="btn btn-primary px-4 py-2 mt-auto" @click="goToDetails">
+            <a href="#" class="btn btn-primary px-4 py-2 mt-auto fs-4" @click="goToDetails">
                 Tìm Hiểu Thêm
             </a>
         </div>
@@ -20,16 +19,19 @@
 <script setup>
 import { defineProps } from "vue";
 import { useRouter } from "vue-router";
-const router = useRouter()
-const goToDetails = () => {
-    router.push(`/product/${props.product.id}`)
-}
+
 const props = defineProps({
     product: {
         type: Object,
         required: true,
     },
 });
+
+const router = useRouter()
+
+const goToDetails = () => {
+    router.push(`/product/${props.product.id}`)
+}
 </script>
 
 <style></style>

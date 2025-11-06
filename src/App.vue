@@ -21,12 +21,8 @@ export default {
 
 <style>
 * {
-  
   /* text-align: center; */
-  font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  list-style: none;
+  font-family: 'BrotherJhonBoldItalic', sans-serif;
+  text-decoration: none !important; 
 }
 </style>

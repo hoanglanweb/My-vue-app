@@ -27,15 +27,15 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 const slides = [
   {
     image: require("../assets/images/banner-01.jpg"),
-    title: "HURRY! <br> GET THE BEST CAR FOR YOU",
+    title: "HURRY! GET THE BEST CAR FOR YOU",
   },
   {
     image: require("../assets/images/banner-02.jpg"),
-    title: "LUXURY CAR <br> FOR YOUR FAMILY",
+    title: "LUXURY CAR FOR YOUR FAMILY",
   },
   {
     image: require("../assets/images/banner-03.jpg"),
-    title: "ENJOY YOUR <br> DREAM CAR",
+    title: "ENJOY YOUR DREAM CAR",
   },
 ];
 
@@ -112,7 +112,7 @@ onBeforeUnmount(() => {
 }
 
 .content h2 {
-  font-size: 46px;
+  font-size: 6rem;
   font-weight: 700;
   line-height: 1.2;
   margin-top: 15px;
