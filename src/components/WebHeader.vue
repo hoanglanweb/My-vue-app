@@ -24,7 +24,7 @@
         <div class="blur"></div>
         <!-- Navigation -->
         <nav class="navbar-menu">
-            <div class="logo"><router-link to="/">ModelPro</router-link></div>
+            <div class="logo"><router-link to="/">Auto Dreams</router-link></div>
 
             <div class="navbar_navigation">
                 <ul class="menu">
@@ -40,8 +40,10 @@
                         </ul>
                     </li>
                     <li><router-link to="/contact">Liên hệ</router-link></li>
-                    <li><a href="">Đăng ký</a></li>
-                    <li><a href="">Đăng nhập</a></li>
+                    <li style="font-size: 1.35rem;"><router-link to="/user"><i
+                                class="fa-solid fa-user"></i></router-link></li>
+                    <li style="font-size: 1.35rem;"><router-link to="/cart"><i
+                                class="fa-solid fa-cart-shopping"></i></router-link></li>
                 </ul>
             </div>
         </nav>
@@ -109,10 +111,11 @@ header {
     justify-content: center;
     cursor: pointer;
     transition: color 0.3s;
-    width: 45px;
-    height: 40px;
+    width: 30px;
+    height: 25px;
     background-color: #cdcdcdb0;
     border-radius: 50%;
+    font-size: 16px;
 }
 
 .social-icons i:hover {
@@ -129,7 +132,7 @@ header {
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #000;
     text-decoration: none;
@@ -150,6 +153,7 @@ header {
 
 .menu li {
     position: relative;
+    cursor: pointer;
 }
 
 .menu a,
@@ -160,7 +164,7 @@ header {
     padding: 10px;
     display: block;
     transition: color 0.3s ease;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
 .menu a:hover,

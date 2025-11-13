@@ -8,66 +8,48 @@
             <img src="../assets/logo-porsche.png" alt="">
         </div>
         <div class="blur"></div>
-        <h1 class="text" style="text-align: center; font-size: 5rem;">The Ultimate Driving Experience</h1>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 column-1">
-                    <img src="../assets/images/features-01.jpg" alt="">
-                </div>
-                <div class="col-lg-5 column-2">
-                    <h1 style="text-align: center; font-size: 3rem;">Our Greatest Car Sellers</h1>
-                    <div v-for="item in featuresContent" :key="item.id" class="feature-box">
-                        <!-- Tiêu đề có thể click -->
-                        <div class="header" @click="toggleBox(item.id)">
-                            <p class="title" style="font-size: 1.35rem;">{{ item.title }}</p>
-                            <span>{{ activeBox === item.id ? '' : '' }}</span>
-                        </div>
-
-                        <!-- Nội dung ẩn/hiện theo hộp đang mở -->
-                        <transition name="slide">
-                            <div v-if="activeBox === item.id" class="content">
-                                <p style="font-size: 1.2rem;">{{ item.content }}</p>
-                            </div>
-                        </transition>
+        <h1 class="text" style="text-align: center; font-size: 5rem;">Với 14 năm kinh nghiệm </h1>
+        <div class="section">
+            <div>
+                <img src="../assets/images/banner-04.jpg" alt="">
+            </div>
+            <div class="features-card">
+                <div class="card-content">
+                    <i class="fa-solid fa-car icon"></i>
+                    <div class="card-item">
+                        <h3 class="card__title">Dòng xe đa dạng</h3>
+                        <p class="card__description">Từ sedan sang trọng đến SUV thể thao, bạn có thể dễ dàng chọn chiếc
+                            xe
+                            phù hợp với phong cách
+                            riêng.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 column-3">
-                    <ul>
-                        <li>
-                            <img src="" alt="">
-                            <h4>
-                                Limit
-                                <span></span>
-                            </h4>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <img src="" alt="">
-                            <h4>
-                                Contact
-                                <span></span>
-                            </h4>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <img src="" alt="">
-                            <h4>
-                                Payment
-                                <span></span>
-                            </h4>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <img src="" alt="">
-                            <h4>
-                                Safety
-                                <span></span>
-                            </h4>
-                        </li>
-                    </ul>
+                <div class="card-content">
+                    <i class="fa-solid fa-gem icon"></i>
+                    <div class="card-item">
+                        <h3 class="card__title">Dịch vụ chuyên nghiệp</h3>
+                        <p class="card__description">Đội ngũ nhân viên tận tâm hỗ trợ 24/7, đảm bảo sự hài lòng tuyệt
+                            đối.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <i class="fa-solid fa-gear icon"></i>
+                    <div class="card-item">
+                        <h3 class="card__title">Công nghệ hiện đại</h3>
+                        <p class="card__description">Hệ thống website thân thiện, tối ưu trải nghiệm người dùng và bảo
+                            mật
+                            thông tin khách hàng.</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <i class="fa-solid fa-box icon"></i>
+                    <div class="card-item">
+                        <h3 class="card__title">Hậu mãi chu đáo</h3>
+                        <p class="card__description">Cam kết bảo hành chính hãng, dịch vụ bảo dưỡng chuyên nghiệp và hỗ
+                            trợ
+                            khách hàng lâu dài.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,12 +57,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import featuresContent from '../data/Data.json'
-const activeBox = ref(null)
-function toggleBox(id) {
-    activeBox.value = activeBox.value === id ? null : id
-}
 </script>
 
 <style>
@@ -90,35 +66,41 @@ function toggleBox(id) {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }
-.features .text{
+
+.features .text {
     margin-top: 4rem;
     margin-bottom: 4rem;
     font-size: 3.5rem;
 
 }
-.blur{
+
+.blur {
     width: 1250px;
     margin: auto;
     border: 1px solid rgba(128, 128, 128, 0.123);
     margin-top: 2.5rem;
     margin-bottom: 2rem;
 }
-.logo-banner{
+
+.logo-banner {
     max-width: 650px;
     margin: auto;
     display: flex;
     justify-content: center;
-    gap: 12rem;
+    gap: 8rem;
 }
-.logo-banner img{
-    width: 23%;
+
+.logo-banner img {
+    width: 14%;
     filter: opacity(0.5);
     transition: all .3s ease-in-out;
     cursor: pointer;
 }
-.logo-banner img:hover{
+
+.logo-banner img:hover {
     filter: opacity(1);
 }
+
 .container {
     max-width: 1300px;
     margin: auto;
@@ -131,150 +113,76 @@ function toggleBox(id) {
     gap: 50px;
 }
 
-/* ===== CỘT 1 ===== */
-.column-1 {
-    width: 540px;
-    position: relative;
-}
-
-.column-1 img {
-    width: 100%;
-    object-fit: cover;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s ease;
-}
-
-.column-1 img:hover {
-    transform: scale(1.03);
-}
-
-/* ===== CỘT 2 ===== */
-.column-2 {
-    width: 400px;
-    margin: 0 auto;
-}
-
-.feature-box {
-    border: 1px solid #e2e2e2;
-    border-radius: 10px;
-    margin-bottom: 14px;
-    background: #fff;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.3s ease;
-}
-
-.feature-box:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.header {
+.section {
     display: flex;
     justify-content: space-between;
+}
+
+.features-card {
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 1rem;
+}
+
+.card-content {
+    position: relative;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    display: flex;
     align-items: center;
-    padding: 14px 18px;
-    cursor: pointer;
-    background: #f9fafc;
-    font-weight: 600;
-    font-size: 15px;
-    color: #333;
-    transition: all 0.3s ease;
-}
-
-.header:hover {
-    background: #eef2f7;
-}
-
-.header span {
-    font-size: 20px;
-    color: #ff6b35;
-    transition: transform 0.3s ease;
-}
-
-/* Mũi tên xoay khi mở */
-.header.active span {
-    transform: rotate(180deg);
-}
-
-/* Nội dung ẩn/hiện */
-.content {
-    padding: 12px 18px 18px;
-    line-height: 1.6;
-    font-size: 14px;
-    color: #555;
+    justify-content: center;
     overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Hiệu ứng trượt */
-.slide-enter-active,
-.slide-leave-active {
-    transition: max-height 0.4s ease, opacity 0.3s ease;
+.card-content .icon {
+    font-size: 2rem;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.slide-enter-from,
-.slide-leave-to {
-    max-height: 0;
+.card-content:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
     opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.slide-enter-to,
-.slide-leave-from {
-    max-height: 400px;
+.card-content:hover .card-item {
+    transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
 }
 
-/* ===== CỘT 3 ===== */
-.column-3 {
-    width: 260px;
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px 28px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-}
-
-.column-3 ul {
-    list-style: none;
+.card-item h3 {
     margin: 0;
-    padding: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
 }
 
-.column-3 li {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    padding: 16px 0;
-    transition: all 0.3s ease;
+.card-item p {
+    margin: 10px 0 0;
+    font-size: 20px;
+    color: #777;
+    line-height: 1.4;
 }
 
-.column-3 li:last-child {
-    border-bottom: none;
+.card-content:hover .icon {
+    scale: 0;
 }
 
-.column-3 li:hover {
-    transform: translateX(5px);
-}
-
-.column-3 img {
-    width: 40px;
-    height: 40px;
-    margin-right: 14px;
-    filter: invert(50%) sepia(97%) saturate(1730%) hue-rotate(346deg) brightness(99%) contrast(96%);
-}
-
-.column-3 h4 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #222;
-    margin: 0;
-}
-
-.column-3 span {
-    display: block;
-    font-size: 13px;
-    color: #999;
-    margin-top: 4px;
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {

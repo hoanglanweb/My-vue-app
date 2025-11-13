@@ -1,6 +1,5 @@
 <template>
     <div class="layout">
-        <h1 style="text-align: center; font-size: 4.5rem;">Sản phẩm nổi bật</h1>
         <ProductsList />
     </div>
 </template>

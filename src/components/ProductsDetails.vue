@@ -9,7 +9,7 @@
             <!-- Thông tin sản phẩm -->
             <div class="item-2">
                 <h1 class="title">{{ product.name }}</h1>
-                <p class="price">{{ product.price }}</p>
+                <p class="price">{{formatCurrency( product.price) }}</p>
                 <p class="desc">
                     {{ product.description }}
                 </p>
@@ -31,11 +31,15 @@
                         <span class="spec-label">Nhiên liệu:</span>
                         <span class="spec-value">{{ product.details.fuel }}</span>
                     </div>
+                     <div class="spec">
+                        <span class="spec-label">Động cơ:</span>
+                        <span class="spec-value">{{ product.details.engineType }}</span>
+                    </div>
                 </div>
 
                 <div class="btn-group">
-                    <button class="btn buy-now">Đăng ký lái thử</button>
-                    <button class="btn add-cart">Tư vấn chi tiết</button>
+                    <button @click="buyNow" class="btn buy-now">Mua Ngay</button>
+                    <button @click="addToCart" class="btn add-cart">Thêm giỏ hàng</button>
                 </div>
             </div>
         </div>
@@ -51,13 +55,16 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { useProductStore } from '@/store/ProductsAPI';
 import { computed, onMounted } from 'vue';
+import { useCartStore } from '@/store/Cart';
 
 
 const route = useRoute()
+const router =  useRouter()
 const store = useProductStore()
+const CartStore = useCartStore()
 
 onMounted(() => {
     store.fetchProduct()
@@ -66,6 +73,24 @@ onMounted(() => {
 const product = computed(() => {
     return store.product.find((p) => p.id == parseInt(route.params.id))
 })
+
+function addToCart() {
+    if (product.value) {
+        CartStore.addItemCart(product.value);
+        alert("✅ Đã thêm sản phẩm vào giỏ hàng!");
+    }
+}
+
+function buyNow() {
+    if (product.value) {
+        CartStore.addItemCart(product.value); 
+        router.push("/cart"); 
+    }
+}
+function formatCurrency(v) {
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(v)
+}
+
 </script>
 
 <style scoped>
@@ -93,7 +118,7 @@ const product = computed(() => {
 }
 
 .title {
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
@@ -109,7 +134,7 @@ const product = computed(() => {
     color: #555;
     margin-bottom: 2rem;
     line-height: 1.6;
-    font-size: 1.75rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -132,14 +157,14 @@ const product = computed(() => {
 
 .spec-label {
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #333;
 }
 
 .spec-value {
     color: #111;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .btn-group {
@@ -153,7 +178,7 @@ const product = computed(() => {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -186,7 +211,8 @@ const product = computed(() => {
 .ProductsDetails-Description h2 {
     margin-bottom: 1rem;
 }
-.ProductsDetails-Description p{
-    font-size: 1.5rem;
+
+.ProductsDetails-Description p {
+    font-size: 1.4rem;
 }
 </style>

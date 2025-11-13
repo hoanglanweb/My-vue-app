@@ -4,6 +4,7 @@ import About from "@/pages/about.vue";
 import ProductsDetails from "@/components/ProductsDetails.vue";
 import prduct from "@/pages/prduct.vue";
 import ContactPage from "@/pages/contactPage.vue";
+import CartShopping from "@/components/CartShopping.vue";
 
 const routes = [
   {
@@ -28,6 +29,11 @@ const routes = [
     component: ContactPage,
   },
   {
+    path: "/cart",
+    name: "Cart",
+    component: CartShopping,
+  },
+  {
     path: "/product/:id",
     name: "ProductsDetails",
     component: ProductsDetails,
@@ -38,6 +44,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
 });
 
 export default router;

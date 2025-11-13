@@ -23,6 +23,6 @@ export default {
 * {
   /* text-align: center; */
   font-family: 'BrotherJhonBoldItalic', sans-serif;
-  text-decoration: none !important; 
+  text-decoration: none !important;
 }
 </style>
