@@ -31,9 +31,11 @@ const fliterProduct = computed(() => {
 .Product {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-bottom: 2rem;
+    margin-top: 4rem;
 }
 
 

@@ -1,14 +1,12 @@
 <template>
     <div>
-        <WebSection />
-        <WebFeatures />
+        <!-- <WebFeatures /> -->
         <ProductsHome />
     </div>
 </template>
 
 <script setup>
-import WebFeatures from './WebFeatures.vue';
-import WebSection from './WebSection.vue';
+// import WebFeatures from './WebFeatures.vue';
 import ProductsHome from './ProductsHome.vue';
 
 </script>

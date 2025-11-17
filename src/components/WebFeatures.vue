@@ -1,15 +1,13 @@
 <template>
     <div class="features">
-        <div class="logo-banner">
+        <!-- <div class="logo-banner">
             <img src="../assets/logo-audi.png" alt="">
             <img src="../assets/logo-mer.png" alt="">
             <img src="../assets/logo-bmw.png" alt="">
             <img src="../assets/logo-rr.png" alt="">
             <img src="../assets/logo-porsche.png" alt="">
-        </div>
-        <div class="blur"></div>
-        <h1 class="text" style="text-align: center; font-size: 5rem;">Với 14 năm kinh nghiệm </h1>
-        <div class="section">
+        </div> -->
+        <!-- <div class="section">
             <div>
                 <img src="../assets/images/banner-04.jpg" alt="">
             </div>
@@ -52,7 +50,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -62,7 +60,7 @@
 <style>
 .features {
     padding: 80px 0;
-    background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+    /* background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%); */
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }

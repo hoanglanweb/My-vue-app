@@ -1,53 +1,45 @@
 <template>
     <header>
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="left-info">
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>nguyenhoanlan@company.com</span>
-                </div>
-                <div class="divider"></div>
-                <div class="info-item">
-                    <i class="fa-solid fa-map-marker-alt"></i>
-                    <span>Ho Chi Minh City</span>
-                </div>
-            </div>
-
-            <div class="social-icons">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-                <i class="fa-brands fa-instagram"></i>
-            </div>
-        </div>
-        <div class="blur"></div>
         <!-- Navigation -->
         <nav class="navbar-menu">
-            <div class="logo"><router-link to="/">Auto Dreams</router-link></div>
-
+            <div class="banner">
+                <img src="../assets/images/banner-07.jpg" alt="">
+            </div>
+            <div class="text-center">
+                <h1>
+                    <span style="color: rgb(252,91,34);">Nâng tầm trải nghiệm </span><br> và tính tế <br> từng nhịp lái
+                </h1>
+            </div>
             <div class="navbar_navigation">
-                <ul class="menu">
-                    <li><router-link to="/about">Giới thiệu</router-link></li>
-                    <li class="dropdown">
-                        <router-link to="/product">Sản phẩm</router-link>
-                        <ul class="dropdown-menu">
-                            <li v-for="brand in brands" :key="brand">
-                                <router-link :to="{ path: '/product', query: { brand } }">
-                                    {{ brand }}
-                                </router-link>
+                <div class="navbar_navigation__nav">
+                    <ul class="menu_link">
+                        <router-link  class="logo" to="/" style="color: rgb(252,91,34)">AutoDreams</router-link>
+                        <div class="menu_link--navigation">
+                            <li><router-link to="/about">Giới thiệu</router-link></li>
+                            <li class="dropdown">
+                                <router-link to="/product">Sản phẩm</router-link>
+                                <ul class="dropdown-menu">
+                                    <li v-for="brand in brands" :key="brand">
+                                        <router-link :to="{ path: '/product', query: { brand } }">
+                                            {{ brand }}
+                                        </router-link>
+                                    </li>
+                                </ul>
                             </li>
-                        </ul>
-                    </li>
-                    <li><router-link to="/contact">Liên hệ</router-link></li>
-                    <li style="font-size: 1.35rem;"><router-link to="/user"><i
-                                class="fa-solid fa-user"></i></router-link></li>
-                    <li style="font-size: 1.35rem;"><router-link to="/cart"><i
-                                class="fa-solid fa-cart-shopping"></i></router-link></li>
-                </ul>
+                            <li><router-link to="/contact">Liên hệ</router-link></li>
+                            <li style="font-size: 1.35rem;"><router-link to="/user"><i
+                                        class="fa-solid fa-user"></i></router-link></li>
+                            <li style="font-size: 1.35rem;"><router-link to="/cart"><i
+                                        class="fa-solid fa-cart-shopping"></i></router-link></li>
+                        </div>
+                    </ul>
+                    <ul class="Btn-buy">
+                        <li><a href="#" class="sdt">0867790028</a></li>
+                        <li><a href="#" class="button">Liên hệ</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-
     </header>
 </template>
 
@@ -56,218 +48,192 @@ import data from '@/data/products.json'
 const brands = [...new Set(data.products.map(item => item.brand))]
 </script>
 
-<style scoped>
+<style>
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+.navbar-menu{
+    margin-bottom: 6rem;
+}
+/* ==== BANNER + NAVBAR ==== */
+.banner {
+    position: relative;
+    overflow: hidden;
+}
 
-header {
+.banner img {
     width: 100%;
-    font-family: "Poppins", sans-serif;
-    border-bottom: 1px solid #eee;
-    max-width: 1380px;
-    margin: auto;
+    height: 850px;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.1);
+    transform-origin: center;
 }
 
-/* --- TOP BAR --- */
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 60px;
-    font-size: 26px;
-    color: #666;
-}
-
-.left-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.info-item i {
-    color: #ff5b00;
-}
-
-.divider {
-    height: 16px;
-    width: 1px;
-    background-color: #ddd;
-}
-
-.social-icons {
-    display: flex;
-    gap: 16px;
-    color: #aaa;
-}
-
-.social-icons i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: color 0.3s;
-    width: 30px;
-    height: 25px;
-    background-color: #cdcdcdb0;
-    border-radius: 50%;
-    font-size: 16px;
-}
-
-.social-icons i:hover {
-    color: #ff5b00;
-}
-
-/* --- NAVBAR --- */
-.navbar-menu {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 50px;
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #000;
-    text-decoration: none;
-}
-
+/* ==== NAVBAR ==== */
 .navbar_navigation {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: 22px 70px;
+    width: 100%;
+    z-index: 100;
 }
 
-.menu {
+.navbar_navigation__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.text-center {
+    position: absolute;
+    top: 220px;
+    right: 100px;
+}
+
+.text-center h1 {
+    color: #fff;
+    font-size: 7rem;
+    text-align: right;
+    font-weight: 400;
+}
+
+.Btn-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Btn-buy li a {
+    color: #fff;
+}
+
+.Btn-buy li .sdt {
+    font-size: 1.6rem;
+}
+
+.Btn-buy li .button {
+    appearance: none;
+    background-color: rgb(253,86,34);
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.5em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.Btn-buy li .button:disabled {
+    pointer-events: none;
+}
+
+.Btn-buy li .button:hover {
+    color: #fff;
+    background-color: orange;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.Btn-buy li .button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Menu */
+.menu_link {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 6rem;
 }
 
-.menu li {
+.menu_link .menu_link--navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.menu_link .logo {
+    font-size: 2.5rem;
+}
+
+.menu_link li {
     position: relative;
-    cursor: pointer;
 }
 
-.menu a,
-.menu router-link {
-    color: #000;
+.menu_link a {
+    color: #fff;
     text-decoration: none;
+    font-size: 1.3rem;
     font-weight: 500;
-    padding: 10px;
-    display: block;
-    transition: color 0.3s ease;
-    font-size: 1.2rem;
+    transition: 0.3s ease;
 }
 
-.menu a:hover,
+.menu_link a:hover,
 .router-link-active {
-    color: orangered;
+    color: #ff6600;
 }
 
-/* DROP DOWN */
-.dropdown {
-    position: relative;
-}
-
+/* ==== DROPDOWN ==== */
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #222;
+
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(6px);
+
+    padding: 12px 0;
+    min-width: 240px;
+    border-radius: 10px;
     list-style: none;
-    margin: 0;
-    padding: 10px 0;
-    min-width: 360px;
-    border-radius: 6px;
-    z-index: 999;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 }
 
-/* hiển thị khi hover */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
 .dropdown-menu li {
-    padding: 8px 20px;
-    white-space: nowrap;
+    padding: 10px 20px;
 }
 
 .dropdown-menu li a {
     color: #fff;
-    text-decoration: none;
+    font-size: 1rem;
     display: block;
 }
 
 .dropdown-menu li a:hover {
-    color: orangered;
+    color: #ff6600;
 }
 
-/* Nút Schedule */
-.visit-btn {
-    background-color: #ffce00;
-    color: #111;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: 0.3s ease;
-}
-
-.visit-btn:hover {
-    background-color: #fff;
-    color: #111;
-}
-
-.icon-circle {
-    background-color: #111;
-    color: #ffce00;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* --- BUTTON --- */
-.visit-btn {
-    background-color: #000;
+/* ==== ICONS ==== */
+.menu_link i {
+    font-size: 1.4rem;
     color: #fff;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 40px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
-.visit-btn:hover {
-    background-color: #ff5b00;
-}
-
-.icon-circle {
-    background-color: #ff5b00;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
+.menu_link i:hover {
+    color: #ff6600;
 }
 </style>
