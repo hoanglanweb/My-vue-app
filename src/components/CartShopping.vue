@@ -5,10 +5,10 @@
             <section class="left">
                 <h2 class="title">Giỏ hàng — Xe của bạn</h2>
 
-                <button class="btn btn-primary remove" @click="removeFromCart(index)">Xóa</button>
                 <div v-if="cart.length" class="cart-list">
                     <div v-for="(item) in cart" :key="item.id" class="cart-item">
-                        <img :src="require(`@/assets/product/${item.image}`)" alt="car" class="car-image" />
+                        <img :src="require(`@/assets/product/${item.image}`)" alt="car" class="car-image_cart" />
+                        <button class="btn btn-primary remove" @click="removeFromCart(index)">Xóa</button>
                     </div>
 
                     <!-- voucher + notes -->
@@ -33,7 +33,7 @@
                 <div v-for="(item) in cart" :key="item.id">
                     <div class="item-info">
                         <h3 class="item-name">{{ item.name }}</h3>
-                        <p class="item-meta">{{ item.brand }}</p>
+                        <!-- <p class="item-meta">{{ item.brand }}</p> -->
                     </div>
                 </div>
                 <div class="summary">
@@ -169,249 +169,260 @@ function checkout() {
     /* slate */
     --radius: 14px;
 }
-.remove{
-    position: absolute;
-    top: 15px;
-    right: 20px;
+
+.remove {
+   
 }
+
+/* ====== GLOBAL ====== */
 .container {
-    min-height: 100vh;
-    background: var(--bg);
-    padding: 24px;
-    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: #303030;
+    border-radius: 12px;
+    padding: 40px;
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
 
 .content {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 24px;
+    display: flex;
+    gap: 40px;
 }
 
-.left,
-.right {
-    position: relative;
-    background: var(--card);
-    padding: 20px;
-    border-radius: var(--radius);
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+/* ====== LEFT SECTION ====== */
+.left {
+    width: 60%;
 }
 
 .title {
-    font-size: 20px;
-    margin-bottom: 16px;
-    color: var(--primary)
-}
-
-.subtitle {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    color: var(--primary)
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .cart-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px
+    background: #262626;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .cart-item {
     display: flex;
-    align-items: center;
-    gap: 14px;
-    border: 1px solid #e6e9ee;
+    justify-content: space-between;
     padding: 12px;
-    border-radius: 12px;
-}
-
-.car-image {
-    width: 100%;
-    /* height: 200px; */
-    object-fit: cover;
-    border-radius: 8px
-}
-
-.item-info {
-    flex: 1
-}
-
-.item-name {
-    font-weight: 600;
-    margin: 0 0 4px
-}
-
-.item-meta {
-    margin: 0;
-    color: var(--muted);
-    font-size: 13px
-}
-
-.item-controls {
-    display: flex;
+    background: #303030;
+    border-radius: 10px;
+    margin-bottom: 15px;
     align-items: center;
-    gap: 12px;
-    margin-top: 10px
 }
 
-.label {
-    color: var(--muted);
-    font-size: 13px
+.car-image_cart {
+    width: 440px;
+    height: 380px;
+    object-fit: contain;
 }
 
-.qty-input {
-    width: 72px;
-    padding: 6px;
-    border: 1px solid #d1d5db;
-    border-radius: 6px
-}
-
-.remove-btn {
-    margin-left: auto;
-    background: none;
+/* Xóa item */
+.remove {
+    background: #FD5622;
+    color: #fff;
     border: none;
-    color: #ef4444;
-    cursor: pointer
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 12px;
 }
 
-.item-price {
-    text-align: right;
-    min-width: 120px
+.remove:hover {
+    opacity: 0.8;
 }
 
-.small {
-    color: var(--muted);
-    font-size: 2rem;
-}
-
-.price {
-    font-weight: 700;
-    font-size: 18px
-}
-
+/* Input + buttons */
 .controls-row {
     display: flex;
+    gap: 12px;
     align-items: center;
-    gap: 10px;
-    margin-top: 12px
+    margin-top: 20px;
 }
 
 .input {
     flex: 1;
-    padding: 8px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px
+    padding: 12px;
+    background: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
 }
 
 .btn {
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: 12px 20px;
+    background: #FD5622;
     border: none;
-    background: #4f46e5;
-    color: white;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
     cursor: pointer;
-    float: right;
+}
+
+.btn:hover {
+    opacity: 0.85;
 }
 
 .coupon-msg {
-    color: #b45309;
-    font-size: 13px
+    color: #FD5622;
+    font-size: 14px;
 }
 
+/* Notes */
 .notes {
-    margin-top: 12px
+    margin-top: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 6px;
+    opacity: 0.8;
 }
 
 .textarea {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px
+    padding: 12px;
+    border-radius: 8px;
+    background: #1f1f1f;
+    border: 1px solid #444;
+    color: #fff;
 }
 
 .empty {
-    padding: 40px;
+    padding: 20px;
+    background: #262626;
     text-align: center;
-    color: var(--muted)
+    border-radius: 8px;
+    font-size: 16px;
 }
 
-/* Right column */
+/* ====== RIGHT SECTION ====== */
+.right {
+    width: 40%;
+    background: #262626;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.item-info {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.item-meta {
+    font-size: 14px;
+    color: #d6d6d6;
+}
+
+/* Summary */
 .summary {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    margin-top: 15px;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    color: var(--muted)
+    padding: 6px 0;
 }
 
-.row span {
-    font-size: 1.5rem;
-}
-
-.discount {
-    color: #059669
+.discount span {
+    color: #FD5622;
 }
 
 .total-row {
-    border-top: 1px solid #eef2f6;
-    padding-top: 12px;
-    margin-top: 8px;
+    margin-top: 15px;
+    padding: 14px;
+    background: #1f1f1f;
+    border-radius: 10px;
 }
 
 .total {
-    font-size: 2rem;
-    font-weight: 800
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 4px;
 }
 
+/* Checkout form */
 .checkout-form {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 8px
-}
-
-.select-row {
-    display: flex;
-    flex-direction: column
+    gap: 12px;
 }
 
 .select {
-    padding: 8px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px
+    width: 100%;
+    padding: 12px;
+    background: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
 }
 
 .finance-note {
-    font-size: 13px;
-    color: var(--muted)
+    background: #303030;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffb38a;
 }
 
 .charge-btn {
-    padding: 12px;
-    border-radius: 10px;
-    background: var(--accent);
-    color: white;
+    margin-top: 15px;
+    width: 100%;
+    padding: 14px;
+    background: #FD5622;
+    color: #fff;
     border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
     cursor: pointer;
-    font-weight: 700
 }
 
+.charge-btn:hover {
+    opacity: 0.85;
+}
+
+/* Success */
 .success {
-    margin-top: 12px;
-    padding: 10px;
-    background: #ecfdf5;
-    color: #065f46;
-    border-radius: 8px
+    margin-top: 20px;
+    background: #1f1f1f;
+    padding: 14px;
+    border-left: 4px solid #FD5622;
+    border-radius: 8px;
+    color: #fff;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
     .content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
     }
 }
 </style>

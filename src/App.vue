@@ -1,7 +1,9 @@
 <template>
-  <WebHeader />
-  <router-view />
-  <WebFooter />
+  <div>
+    <WebHeader />
+    <router-view />
+    <WebFooter />
+  </div>
 </template>
 
 <script>
@@ -22,13 +24,15 @@ export default {
 <style>
 * {
   /* text-align: center; */
-  font-family: 'BrotherJhonBoldItalic', sans-serif;
+  /* font-family: 'BrotherJhonBoldItalic', sans-serif; */
   text-decoration: none !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-#app{
-  background-color: rgb(31,28,28);
+
+#app {
+  background-color: #1a1a1a;
+  /* 1a1a1a */
 }
 </style>

@@ -10,8 +10,8 @@
             <div class="info">
                 <div class="info-content">
                     <div class="item-1">
-                        <h2>{{ props.product.name }}</h2>
-                        <span class="price">{{ formatCurrency(props.product.price) }}</span>
+                        <h2 style="font-weight: 600;">{{ props.product.name }}</h2>
+                        <span class="price" style="font-size: 20px;">{{ formatCurrency(props.product.price) }}</span>
                     </div>
                     <div class="item-2">
                         <p class="sub">{{ props.product.style }} • {{ props.product.year }}</p>
@@ -83,28 +83,54 @@ function formatCurrency(v) {
 </script>
 
 <style>
-.car-card {
-    width: 420px;
-    background: #1c1c1e;
-    color: #fff;
-    border-radius: 16px;
+.card {
+    width: 480px;
+    /* hoặc 100% nếu grid */
+    height: 480px;
+    /* FIX chiều cao card */
+    display: flex;
+    flex-direction: column;
+    background: #1d1d1f;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+}
+
+.car-card {
+    width: auto;
+    background: #1c1c1e;
+    color: #fff;
+    /* border-radius: 16px; */
+    overflow: hidden;
     cursor: pointer;
 }
 
 .car-image {
-    position: relative;
+    width: 100%;
+    height: 210px;
+    /* cố định chiều cao */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #252324;
 }
 
 .car-image img {
     width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: contain;
+    /* để ảnh không bị cắt đầu */
 }
 
 
 .info {
-    padding: 18px;
+    min-height: 160px;
+    /* chỉnh tuỳ bố cục */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .info h2 {
@@ -131,7 +157,8 @@ function formatCurrency(v) {
 .specs {
     display: flex;
     justify-content: space-between;
-    margin: 15px 0;
+    margin: 10px 0;
+    min-height: 60px;
 }
 
 .spec {
@@ -158,6 +185,7 @@ function formatCurrency(v) {
     display: flex;
     flex-direction: column;
     gap: 3px;
+    min-height: 55px;
 }
 
 .footer span {

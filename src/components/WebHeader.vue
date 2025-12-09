@@ -7,7 +7,7 @@
             </div>
             <div class="text-center">
                 <h1>
-                    <span style="color: rgb(252,91,34);">Nâng tầm trải nghiệm </span><br> và tính tế <br> từng nhịp lái
+                    <span style="color: rgb(252,91,34);">Nâng tầm trải nghiệm </span><br> và tinh tế <br> từng nhịp lái
                 </h1>
             </div>
             <div class="navbar_navigation">
@@ -61,7 +61,7 @@ const brands = [...new Set(data.products.map(item => item.brand))]
 
 .banner img {
     width: 100%;
-    height: 850px;
+    height: auto;
     object-fit: cover;
     display: block;
     transform: scale(1.1);
@@ -87,15 +87,16 @@ const brands = [...new Set(data.products.map(item => item.brand))]
 
 .text-center {
     position: absolute;
-    top: 220px;
+    top: 300px;
     right: 100px;
 }
 
 .text-center h1 {
     color: #fff;
-    font-size: 7rem;
+    font-size: 5.5rem;
     text-align: right;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 .Btn-buy {
@@ -166,7 +167,7 @@ const brands = [...new Set(data.products.map(item => item.brand))]
 .menu_link .menu_link--navigation {
     display: flex;
     justify-content: space-between;
-    width: 350px;
+    width: 450px;
 }
 
 .menu_link .logo {
@@ -236,4 +237,5 @@ const brands = [...new Set(data.products.map(item => item.brand))]
 .menu_link i:hover {
     color: #ff6600;
 }
+
 </style>

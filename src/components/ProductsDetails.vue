@@ -94,125 +94,180 @@ function formatCurrency(v) {
 </script>
 
 <style scoped>
+/* =============================
+    CONTAINER CHUNG
+============================= */
 .ProductsDetails-Layout {
-    max-width: 1280px;
-    margin: 3rem auto;
-    font-family: "Poppins", sans-serif;
-    padding: 0 2rem;
+    width: 100%;
+    padding: 80px 60px;
+    font-family: "Inter", sans-serif;
+    color: #e9e9e9;
+    background: #303030;
 }
 
+/* =============================
+    LAYOUT 2 CỘT
+============================= */
 .ProductsDetails-Layout__Features {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 50px;
+    align-items: center;
 }
 
+/* =============================
+    ẢNH SẢN PHẨM
+============================= */
 .item-1 img {
-    width: 550px;
-    border-radius: 12px;
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
 }
 
-.item-2 {
-    flex: 1;
-}
-
-.title {
-    font-size: 3rem;
+/* =============================
+    THÔNG TIN
+============================= */
+.item-2 .title {
+    font-size: 42px;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
-.price {
-    color: #e63946;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+.item-2 .price {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #FD5622;
+    text-align: start;
 }
 
-.desc {
-    color: #555;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    font-size: 1.2rem;
-    font-weight: 600;
+.item-2 .desc {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 28px;
+    color: #d6d6d6;
+    max-width: 500px;
+    text-align: start;
 }
 
+/* =============================
+    THÔNG SỐ (SPEC BOX)
+============================= */
 .item-2__col {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+    margin-bottom: 32px;
 }
 
 .spec {
+    background: #3a3a3a;
+    padding: 14px 18px;
+    border-radius: 10px;
     display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1rem;
-    background: #f8f9fa;
-    padding: 0.75rem 0.75rem;
-    border-radius: 6px;
+    justify-content: space-between;
+    font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 .spec-label {
-    font-weight: 500;
-    font-size: 1rem;
-    color: #333;
+    font-weight: 600;
+    color: #e8e8e8;
 }
 
 .spec-value {
-    color: #111;
-    font-weight: 600;
-    font-size: 1rem;
+    color: #FD5622;
+    font-weight: 700;
 }
 
+/* =============================
+    BUTTONS PREMIUM
+============================= */
 .btn-group {
     display: flex;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .btn {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    border: none;
+    transition: 0.25s;
+    letter-spacing: 0.3px;
+}
+
+.buy-now {
+    background: #FD5622;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(253, 86, 34, 0.45);
+}
+
+.buy-now:hover {
+    background: #e24d1f;
+    transform: translateY(-2px);
 }
 
 .add-cart {
-    background: #333;
-    color: white;
+    background: #464646;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
 }
 
 .add-cart:hover {
     background: #555;
+    transform: translateY(-2px);
 }
 
-.buy-now {
-    background: #e63946;
-    color: white;
-}
-
-.buy-now:hover {
-    background: #d62828;
-}
-
+/* =============================
+    MÔ TẢ CHI TIẾT
+============================= */
 .ProductsDetails-Description {
-    margin-top: 4rem;
-    background: #fafafa;
-    padding: 2rem;
-    border-radius: 12px;
-    line-height: 1.8;
+    margin-top: 50px;
 }
 
 .ProductsDetails-Description h2 {
-    margin-bottom: 1rem;
+    font-size: 28px;
+    margin-bottom: 18px;
+    border-left: 6px solid #FD5622;
+    padding-left: 14px;
+    color: #fff;
 }
 
 .ProductsDetails-Description p {
-    font-size: 1.4rem;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #FD5622;
+    max-width: 900px;
+    text-align: start;
+}
+
+/* =============================
+    RESPONSIVE
+============================= */
+@media (max-width: 900px) {
+    .ProductsDetails-Layout__Features {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .item-2 .desc,
+    .ProductsDetails-Description p {
+        margin: 0 auto;
+    }
+
+    .item-2__col {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
 }
 </style>

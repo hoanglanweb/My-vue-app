@@ -1,6 +1,6 @@
 <template>
     <div class="layout">
-        <h1>dòng xe nổi bật</h1>
+        <h1>Dòng xe nổi bật</h1>
         <p>Trải nghiệm sự xa hoa tuyệt đối cùng những mẫu xe sang hàng đầu</p>
         <ProductsList />
     </div>
